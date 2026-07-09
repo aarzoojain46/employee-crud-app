@@ -8,7 +8,6 @@ This application exposes a set of REST endpoints to manage `Employee` records (n
 
 - Layered architecture (Controller → Service → Repository)
 - DTO-based request/response separation from the entity
-- Input validation using Jakarta Bean Validation
 - Centralized exception handling with standardized error responses
 - Unit testing with JUnit 5 and Mockito across controller and service layers
 - API documentation via Swagger/OpenAPI
@@ -20,7 +19,7 @@ This application exposes a set of REST endpoints to manage `Employee` records (n
   - Spring Web
   - Spring Data JPA
   - Spring Validation
-- **H2 Database** (in-memory, for development/testing)
+- **H2 Database** 
 - **Maven** (build tool)
 - **JUnit 5 + Mockito** (unit testing)
 - **springdoc-openapi** (Swagger UI)
@@ -80,7 +79,7 @@ Default JDBC URL: `jdbc:h2:mem:employeedb` (check `application.properties` for e
 **Request:** `POST /employees`
 ```json
 {
-  "name": "Aarzoo Sharma",
+  "name": "Aarzoo Jain",
   "email": "aarzoo@example.com",
   "salary": 50000.0
 }
@@ -90,7 +89,7 @@ Default JDBC URL: `jdbc:h2:mem:employeedb` (check `application.properties` for e
 ```json
 {
   "id": 1,
-  "name": "Aarzoo Sharma",
+  "name": "Aarzoo Jain",
   "email": "aarzoo@example.com",
   "salary": 50000.0
 }
@@ -103,7 +102,7 @@ Default JDBC URL: `jdbc:h2:mem:employeedb` (check `application.properties` for e
 ```json
 {
   "id": 1,
-  "name": "Aarzoo Sharma",
+  "name": "Aarzoo Jain",
   "email": "aarzoo@example.com",
   "salary": 50000.0
 }
@@ -117,13 +116,13 @@ Default JDBC URL: `jdbc:h2:mem:employeedb` (check `application.properties` for e
 [
   {
     "id": 1,
-    "name": "Aarzoo Sharma",
+    "name": "Aarzoo Jain",
     "email": "aarzoo@example.com",
     "salary": 50000.0
   },
   {
     "id": 2,
-    "name": "Rohan Verma",
+    "name": "Rohan Agrawal",
     "email": "rohan@example.com",
     "salary": 60000.0
   }
@@ -134,7 +133,7 @@ Default JDBC URL: `jdbc:h2:mem:employeedb` (check `application.properties` for e
 **Request:** `PUT /employees/1`
 ```json
 {
-  "name": "Aarzoo Sharma",
+  "name": "Aarzoo Jain",
   "email": "aarzoo@example.com",
   "salary": 55000.0
 }
@@ -144,7 +143,7 @@ Default JDBC URL: `jdbc:h2:mem:employeedb` (check `application.properties` for e
 ```json
 {
   "id": 1,
-  "name": "Aarzoo Sharma",
+  "name": "Aarzoo Jain",
   "email": "aarzoo@example.com",
   "salary": 55000.0
 }
